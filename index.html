@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Your Dog's Name — Official Site</title>
+  <meta name="description" content="A cozy little website celebrating an extremely good dog." />
+  <link rel="preload" as="image" href="assets/dog.jpg">
+  <link rel="icon" href="assets/paw.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <nav class="nav">
+      <a class="brand" href="#top" aria-label="Home"><span class="paw">🐾</span> <span id="brandName">Your Dog's Name</span></a>
+      <button class="nav-toggle" aria-expanded="false" aria-controls="navList">Menu</button>
+      <ul id="navList" class="nav-list">
+        <li><a href="#about">About</a></li>
+        <li><a href="#stats">Stats</a></li>
+        <li><a href="#gallery">Gallery</a></li>
+        <li><a href="#favorites">Favorites</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+    <section class="hero" id="top">
+      <div class="hero-inner">
+        <h1 id="heroName">Your Dog's Name</h1>
+        <p id="heroTagline">World‑class napper & professional good‑girl/boy</p>
+        <a class="btn" href="#about">Meet me</a>
+      </div>
+      <picture class="hero-photo">
+        <img src="assets/dog.jpg" alt="A very good dog posing politely." />
+      </picture>
+    </section>
+  </header>
+
+  <main>
+    <section id="about" class="section about">
+      <h2>About</h2>
+      <p id="aboutBlurb">
+        Hi! I'm <strong>Your Dog's Name</strong>, a lovable <span id="breed">Miniature Schnauzer</span> from <span id="hometown">Your Town</span>.
+        I enjoy snacks, sunbeams, and supervising the shoe rack. I'm gentle with kids, fierce with squirrels,
+        and I take my job as hallway greeter very seriously.
+      </p>
+      <ul class="badges">
+        <li>House‑trained ✅</li>
+        <li>Vaccinated ✅</li>
+        <li>Microchipped ✅</li>
+        <li>Favorite trick: <span id="trick">spin</span> ✨</li>
+      </ul>
+    </section>
+
+    <section id="stats" class="section stats">
+      <h2>Quick Stats</h2>
+      <div class="grid">
+        <article class="card">
+          <h3>Age</h3>
+          <p id="age">8</p>
+        </article>
+        <article class="card">
+          <h3>Pronouns</h3>
+          <p id="pronouns">she/her</p>
+        </article>
+        <article class="card">
+          <h3>Weight</h3>
+          <p id="weight">18 lb</p>
+        </article>
+        <article class="card">
+          <h3>Favorite Snack</h3>
+          <p id="snack">apple slices</p>
+        </article>
+        <article class="card">
+          <h3>Dislikes</h3>
+          <p id="dislikes">thunder & loud vacuums</p>
+        </article>
+        <article class="card">
+          <h3>Best Friend</h3>
+          <p id="bff">the purple Crocs™</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="gallery" class="section gallery">
+      <h2>Gallery</h2>
+      <div class="masonry">
+        <figure><img src="assets/dog.jpg" alt="Dog looking off-camera." /><figcaption>On patrol.</figcaption></figure>
+        <figure><img src="assets/dog.jpg" alt="Dog near shoes." /><figcaption>Footwear inspection.</figcaption></figure>
+        <figure><img src="assets/dog.jpg" alt="Dog being adorable." /><figcaption>Professional cozy.</figcaption></figure>
+      </div>
+      <p class="hint">Add your own photos to <code>/assets/</code> and duplicate a <code>&lt;figure&gt;</code> block.</p>
+    </section>
+
+    <section id="favorites" class="section favorites">
+      <h2>My Favorite Things</h2>
+      <ul class="fav-list">
+        <li>🦴 Chew: bully sticks</li>
+        <li>🎾 Toy: squeaky tennis ball</li>
+        <li>🌳 Park: the shady one with squirrels</li>
+        <li>💤 Nap spot: kitchen rug</li>
+        <li>🛁 Spa day: warm towel + ear scratches</li>
+      </ul>
+    </section>
+
+    <section id="contact" class="section contact">
+      <h2>Contact My Human</h2>
+      <form class="contact-form" name="contact" data-netlify="true">
+        <label> Your name
+          <input name="name" autocomplete="name" required />
+        </label>
+        <label> Your email
+          <input name="email" type="email" autocomplete="email" required />
+        </label>
+        <label> Your message
+          <textarea name="message" rows="5" placeholder="Compliments, playdate requests, or treat offers 😄" required></textarea>
+        </label>
+        <button class="btn" type="submit">Send</button>
+      </form>
+      <p class="hint">Tip: Host on GitHub Pages, Netlify, or Vercel. The form works on Netlify automatically.</p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>© <span id="year"></span> <span id="footerName">Your Dog's Name</span>. Built with love and many treats. 🐶</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
